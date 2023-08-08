@@ -1,0 +1,3 @@
+[console_scripts]
+ijiggy = jiggybase.ijiggy:main
+jiggybase_upload = jiggybase.examples.jiggybase_upload:main

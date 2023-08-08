@@ -1,0 +1,103 @@
+Prompt 1 : We’re trying to determine if X is aware and acknowledging climate change. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X acknowledge climate change as a significant issue for the business?  Here are the criterion to answer the question: 
+•	Yes, if X recognizes climate change as a relevant risk and/or opportunity for the business (Q2) 
+•	Yes, if X has a policy or an equivalent statement committing them to take action on climate change (Q3) 
+•	Yes, if X has set greenhouse gas emission reduction targets (Q4) 
+•	Yes, if X has published information on their operational greenhouse gas emissions (Q5) 
+•	No, if X does not meet any of the above criteria 
+
+Prompt 2 : We’re trying to determine if X acknowledges that climate change presents business risks and/or opportunities, and that the company has a responsibility to manage its greenhouse gas emissions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X recognize climate change as a relevant risk and/or opportunity for the business?  Here are the criterion to answer the question. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.:  
+•	Yes, if X demonstrates recognition of climate change as a relevant risk and/or opportunity to the business, or if they have incorporated at least two of the following, more advanced management practices: 
+•	Yes, if X has a process to manage climate-related risks (Q12) 
+•	Yes, if X has set long-term quantitative targets for reducing their greenhouse gas emissions (Q14) 
+•	Yes, if X incorporates climate change performance into remuneration for senior executives (Q15) 
+•	Yes, if X incorporates climate change risks and opportunities in their strategy (Q16) 
+•	Yes, if X undertakes climate scenario planning (Q17) 
+•	Yes, if X discloses an internal price of carbon (Q18) 
+•	Yes, if X ensures consistency between their climate change policies and the positions taken by trade associations of which they are members (Q19) 
+•	No, if X does not meet any of the above criteria 
+
+Prompt 3 : We’re trying to determine if X acknowledges that climate change presents business risks and/or opportunities, and that the company has a responsibility to manage its greenhouse gas emissions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X have a policy (or equivalent) commitment to action on climate change?  Here are the criterion to answer the question:  
+•	Yes, if X has a published policy or commitment statement on climate change that commits them to addressing the issue, or to reducing or avoiding their impact on climate change (e.g. to reduce emissions or improve their energy efficiency) 
+•	No, if X does not have a policy or commitment statement on climate change 
+
+Prompt 4 : We’re trying to determine if X develops its basic capacity, its management systems and processes, and starts to report on practice and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Has X set greenhouse gas emission reduction targets?  Here are the criterion to answer the question:  
+•	Yes, if X has greenhouse gas emissions reduction targets that cover Scopes 1, 2 and/or 3, and they may be quantified or unquantified 
+•	No, if X does not have greenhouse gas emissions reduction targets
+
+Prompt 5 : We’re trying to determine if X develops its basic capacity, its management systems and processes, and starts to report on practice and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Has X published information on its operational (Scope 1 and 2) greenhouse gas emissions?  Here are the criterion to answer the question:  
+•	Yes, if X reports on their Scope 1 and 2, or their Scope 1, 2 and 3 emissions 
+•	No, if X only reports Scope 1 emissions 
+
+Prompt 6 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Has X nominated a board member or board committee with explicit responsibility for oversight of the climate change policy?  Here are the criterion to answer the question:  
+•	Yes, if X provides evidence of clear board or board committee oversight of climate change, or if they have a named individual/position responsible for climate change at board level 
+•	No, if X does not provide evidence of clear board or board committee oversight of climate change 
+
+Prompt 7 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Has X set quantitative targets for reducing its greenhouse gas emissions?  Here are the criterion to answer the question:  
+•	Yes, if X has set quantified targets to reduce greenhouse emissions in relative or absolute terms (Scopes 1, 2 and/or 3) 
+•	No, if X does not provide information regarding quantified emission targets.
+
+Prompt 8 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X report on Scope 3 emissions?  Here are the criterion to answer the question:  
+•	Yes, if X reports on Scope 3 emissions separately, either in total or in one or more categories, or if they provide a total for Scope 1, 2 and 3 emissions 
+•	No, if X does not report on Scope 3 emissions
+
+Prompt 9 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Has X had its operational (Scope 1 and/or 2) greenhouse gas emissions data verified?  Here are the criterion to answer the question:  
+•	Yes, if X's operational greenhouse gas emissions have been independently verified by a third party, or if they state the international assurance standard they have used and the level of assurance 
+•	No, if X's operational greenhouse gas emissions have not been independently verified by a third party and they do not state the international assurance standard they have used and the level of assurance 
+
+Prompt 10 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X support domestic and international efforts to mitigate climate change?  Here are the criterion to answer the question:  
+•	Yes, if X demonstrates support for mitigating climate change through membership of business associations that are supportive, and if they have a clear company position on public policy and regulation 
+•	No, if X does not demonstrate support for mitigating climate change through membership of business associations that are supportive, and if they do not have a clear company position on public policy and regulation 
+
+Prompt 11 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X have a process to manage climate-related risks?  Here are the criterion to answer the question:  
+•	Yes, if X has integrated climate change into multi-disciplinary company-wide risk management, or if they have a specific climate-related risk management process 
+•	No, if X does not have integrated climate change into multi-disciplinary company-wide risk management or have a specific climate-related risk management process 
+
+Prompt 12 : We’re trying to determine if X improves its operational practices, assigns senior management or board responsibility for climate change and provides comprehensive disclosures on its carbon practices and performance. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+(applicable to some sectors only): Does X disclose materially important Scope 3 emissions?  Here are the criterion to answer the question:  
+•	Yes, if X discloses Scope 3 emissions from use of sold products in sectors such as automobile manufacturing, coal mining, and oil and gas production, where certain categories of Scope 3 emissions are materially important 
+•	No, if X does not disclose Scope 3 emissions from use of sold products in sectors such as automobile manufacturing, coal mining, and oil and gas production 
+
+Prompt 13 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X disclose its membership and involvement in organizations or coalitions dedicated specifically to climate issues?  Here are the criterion to answer the question:  
+•	Yes, if X discloses its memberships in specific organizations dedicated to climate-related issues and its involvement in these organizations 
+•	No, if X does not disclose its memberships in specific organizations dedicated to climate-related issues or its involvement in these organizations 
+
+Prompt 14 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Has X set long-term quantitative targets for reducing its greenhouse gas emissions?  Here are the criterion to answer the question:  
+•	Yes, if X has set quantified, long-term targets (i.e. more than 5 years in duration) to reduce greenhouse emissions in relative or absolute terms (Scopes 1, 2 and/or 3) 
+•	No, if X has not set quantified, long-term targets to reduce greenhouse emissions in relative or absolute terms (Scopes 1, 2 and/or 3) 
+
+Prompt 15 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X's remuneration for senior executives incorporate climate change performance?  Here are the criterion to answer the question:  
+•	Yes, if executive remuneration incorporates climate change performance 
+•	No, if executive remuneration does not incorporate climate change performance 
+
+Prompt 16 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively. Does X incorporate climate change risks and opportunities in their strategy?  Here are the criterion to answer the question:  
+• Yes, if X details how they incorporate climate change risks and opportunities in their strategy (mitigation, new products, R&D, etc.), and if they disclose the impact of climate change risks and opportunities on financial planning (OPEX, CAPEX, M&A, debt) 
+•	No, if X does not detail how they incorporate climate change risks and opportunities in their strategy, or does not disclose the impact of climate change risks and opportunities on financial planning (OPEX, CAPEX, M&A, debt) 
+
+Prompt 17 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X undertake climate scenario planning?  Here are the criterion to answer the question:  
+•	Yes, if X mentions the 2 degrees scenario in relation to business planning or confirms they have conducted climate-related scenario analysis, and if they describe the business impact of one or more climate scenario analysis 
+•	No, if X does not mention the 2 degrees scenario in relation to business planning or does not confirm they have conducted climate-related scenario analysis, or if they do not describe the business impact of one or more climate scenario analysis 
+
+Prompt 18 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X disclose an internal price of carbon?  Here are the criterion to answer the question:  
+•	Yes, if X has and discloses their internal carbon price 
+•	No, if X does not have and disclose their internal carbon price
+
+Prompt 19 : We’re trying to determine if X develops a more strategic and holistic understanding of risks and opportunities related to the low-carbon transition and integrates this into its business strategy and capital expenditure decisions. Please answer by yes or no the question below and reference which chunk of text made you infer the answer based on the corporate reports in the collection ‘Climate disclosures’. If there’s isn’t enough evidence, express the fact that the report has not enough information to answer conclusively.
+Does X ensure consistency between its climate change policy and the positions taken by trade associations of which it is a member?  Here are the criterion to answer the question:  
+•	Yes, if X has a stated policy or commitment to ensure consistency between their climate change policy and the position taken by the trade associations of which they are members, and for responding appropriately in those instances where the trade association position is significantly weaker than or contradicts that of X 
+•	No, if X does not have a stated policy or commitment to ensure consistency between their climate change policy and the position taken by the trade associations of which they are members, or if they do not respond appropriately in those instances where the trade association position is significantly weaker than or contradicts that of X.
