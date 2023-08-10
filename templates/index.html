@@ -1,134 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESG Chat-GPT Q&A</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .container {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
-        }
-        
-        h1 {
-            margin-bottom: 20px;
-            color: #333333;
-        }
-        
-        select, input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            font-size: 16px;
-            color: #333333;
-        }
-        
-        textarea {
-            resize: vertical;
-        }
-        
-        input[type="submit"] {
-            background-color: #007bff;
-            color: #ffffff;
-            cursor: pointer;
-            display: block; /* Center the submit button */
-            margin: 0 auto; /* Center horizontally */
-        }
-        
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ESG Chat-GPT Q&A</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
-        /* Remove border and background for file input */
-        input[type="file"] {
-            border: none;
-            background-color: transparent;
-        }
+    </head>
 
-        /* Additional styles for your logo */
-        .logo-container {
-            text-align: right;
-        }
-        
-        .logo {
-            display: inline-block;
-            width: 150px; /* Adjust based on your design */
-            height: auto; /* This ensures the aspect ratio is maintained */
-            vertical-align: middle;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="static/cropped-Logo-Algora-udm.png" alt="Company Logo" class="logo">
-        <h1>ChatGPT ESG Q&A</h1>
-        <h2>1. Select company</h2>
-        <h3> or upload a pdf</h3>
+    <body>
+        <div class="container1">
+            <img src="static/cropped-Logo-Algora-udm.png" alt="Company Logo" class="logo">
+            <h1>ChatGPT ESG Q&A</h1>
+        </div>
+
+        <div class="container2">
+            <h2>1. Select company</h2>
+            <h3> or upload a pdf ... it takes a minute or so</h3>
+                
             <!-- Upload pdf -->
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="pdfFile" accept=".pdf" />
-                <button type="submit">Upload PDF</button>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <br>
+                <br>
+                <input type="submit" value="Upload">
             </form>
-            <br>
-    
-        <form method="POST">
-            <!-- Select company and Select question -->
-            <label for="company">Select Company:</label>
-            <br>
-            <select name="company">
-                {% for company in companies %}
-                <option value="{{ company }}" {% if company == selected_company %}selected{% endif %}>{{ company }}</option>
-                {% endfor %}
-            </select>
-            <br>          
-            <br>
-            <h2>2. Select a question or enter it below</h2>
-            <label for="question">Select Question:</label>
-            <br>
-            <select name="question">
-                {% for question in questions %}
-                <option value="{{ question }}" {% if question == selected_question %}selected{% endif %}>{{ question }}</option>
-                {% endfor %}
-            </select>
-            <p> or </p>
-            <!-- write your own question -->
-            <label for="text_input">Enter Question:</label>
-                <input type="text" name="text_input" placeholder="Enter text">
-            <br>
-            <h2>3. Press Submit</h2>
-            <input type="submit" value="Submit">
-        </form>
-        <h2>Selected Company:</h2>
-        <h1>{{ company_name }}</h1>
-        {% if selected_company and selected_question %}
-            <div class="text-area">
-            <h2>Prompt</h2>
-            <textarea rows="7" class="rounded-textbox">{{ prompt }}</textarea>
-            <div>   
-            <div class="text-area">
-            <h2>Response</h2>
-            <textarea rows="10" class="rounded-textbox">{{ response }}</textarea>
-            </div>
-        {% endif %}
-        <div>
-    </div>
-</body>
+ 
+            <form action="/process" method="POST">
+                <!-- Select company and Select question -->
+                <label for="company">Select Company:</label>
+                
+                <select name="company">
+                    {% for company in companies %}
+                    <option value="{{ company }}" {% if company == selected_company %}selected{% endif %}>{{ company }}</option>
+                    {% endfor %}
+                </select>
+                
+                <br>          
+                <br>
+                
+                <h2>2. Ask a question</h2>
+                <label for="question">from this menu:</label>
+                <select name="question">
+                    {% for question in questions %}
+                    <option value="{{ question }}" {% if question == selected_question %}selected{% endif %}>{{ question }}</option>
+                    {% endfor %}
+                </select>
+                
+                <p>  </p>
+                <!-- write your own question -->
+                <label for="text_input">or enter your own question:</label>
+                    <input type="text" name="text_input" placeholder="Enter text">
+                <br>
+                <br>
+                <h2>3. Press Submit</h2>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="container3"> 
+            <h2>Selected Company:</h2>
+            <textarea rows="1" class="rounded-textbox">{{ company_name }}</textarea>
+
+            {% if selected_company and selected_question %}
+                <div class="text-area">
+                    <h2>Prompt</h2>
+                    <textarea rows="7" class="rounded-textbox">{{ prompt }}</textarea>
+                </div>   
+                <div class="text-area">
+                    <h2>Response</h2>
+                    <textarea rows="10" class="rounded-textbox">{{ response }}</textarea>
+                </div>
+            {% endif %}
+        </div>
+    </body>
 </html>

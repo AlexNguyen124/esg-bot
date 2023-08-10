@@ -1,0 +1,107 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color and font family */
+body {
+    background-color: #white;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for header and logo */
+.container1 {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 160px;
+    height: auto;
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* Styling for main content */
+.container2, .container3 {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h2, .container3 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.container2 h3, .container3 h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.container3 h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+/* Styling for form elements */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="file"], select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #0055A4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styling for text areas */
+.text-area {
+    margin-top: 20px;
+}
+
+.rounded-textbox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    
+}
+
+/* Styling for response text area */
+.response-text {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Additional custom styling can be added here */
+

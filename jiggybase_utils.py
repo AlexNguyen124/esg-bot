@@ -18,16 +18,17 @@ def collection_doc_names_id():
     filename_id = [filename.rsplit(".", 1)[0] for filename in filename_list]
     return filename_id
 
-def upload_file(collection, file):
+def upload_to_collection(filepath):
     try:
-        upsert_rsp = collection.upsert_file(file)
+        upsert_rsp = collection.upsert_file(filepath)
     except Exception as e:
-        print(f'Error on {file}: {e}')
+        print(f'Error on {filepath}: {e}')
         return
     doc_id = upsert_rsp.ids[0]
     dcl =  collection.get_doc(doc_id)
     text_len = len(" ".join([dc.text for dc in dcl]))
     title = dcl[0].metadata.title if dcl[0].metadata.title else "Unknown Title"
+    print(f'Processed {filepath}: "{title}"  {text_len//1024} KB text ({len(dcl)} chunks)')
 
 def submit_prompt(template,company,qnumber):
     # Split the template into separate prompts
