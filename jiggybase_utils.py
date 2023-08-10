@@ -47,6 +47,7 @@ def submit_prompt(template,company,qnumber):
             type=None,
             description=f"{company}_report"  # Use the company name in the description
             )
+    print(task)
     response = collection._chat_completion(task.prompts,
                                         temperature=0,
                                         model="gpt-3.5-turbo"
@@ -55,7 +56,7 @@ def submit_prompt(template,company,qnumber):
     
 def simple_prompt(entered_question,company):
     prompt_message = PromptMessage(
-        content=entered_question,
+        content = 'Based on documents from ' + company + entered_question,
         role="user",
         position=1,
         extras=None)
@@ -66,6 +67,7 @@ def simple_prompt(entered_question,company):
             type=None,
             description=f"{company}_report"  # Use the company name in the description
             )
+    print(task)
     response = collection._chat_completion(task.prompts,
                                         temperature=0,
                                         model="gpt-3.5-turbo"
