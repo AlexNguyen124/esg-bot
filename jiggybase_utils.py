@@ -3,6 +3,7 @@ import jiggybase.collection
 import jiggybase.models
 from jiggybase.models import PromptMessage
 import jiggybase.org
+import re
 
 #Create Jiggybase collection
 jb = jiggybase.JiggyBase()                  # Initialize JiggyBase
@@ -56,7 +57,7 @@ def submit_prompt(template,company,qnumber):
     
 def simple_prompt(entered_question,company):
     prompt_message = PromptMessage(
-        content = 'Based on documents from ' + company + entered_question,
+        content = 'Based on documents from ' + company + ' ' + entered_question + ', answer with an excerpt from the document and the page',
         role="user",
         position=1,
         extras=None)
@@ -72,6 +73,38 @@ def simple_prompt(entered_question,company):
                                         temperature=0,
                                         model="gpt-3.5-turbo"
                                         )
-    return entered_question, response.choices[0].message.content
+    return prompt_message.content, response.choices[0].message.content
 
 
+def query_for_title(company_name):
+    output = collection.query(company_name,top_k=1)
+    title = output.results[0].results[0].metadata.title
+    return title
+
+
+def excerpt(response):
+    print(response)
+    patterns = [
+        r"I couldn't find any specific documents",
+        r"I couldn't find any specific information",
+        r"there is not enough information",
+        r"there is not enough evidence"
+    ]
+
+    # Combine patterns into a single regular expression
+    combined_pattern = "|".join(patterns)
+
+    # Search for the combined pattern in the response
+    if re.search(combined_pattern, response):
+        excerpt = ''
+        reference_url = 'Not Applicable'
+    else:
+        try:
+            output = collection.query(response,top_k=1)
+            excerpt = output.results[0].results[0].text
+            reference_url = output.results[0].results[0].reference_url
+        except IndexError:
+            excerpt = ''
+            reference_url = ''
+
+    return excerpt, reference_url

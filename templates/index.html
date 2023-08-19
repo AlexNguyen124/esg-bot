@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ESG Chat-GPT Q&A</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="icon" href="static/udem round logo.png" type="image/png">
+
 
     </head>
 
@@ -12,6 +14,8 @@
         <div class="container1">
             <img src="static/cropped-Logo-Algora-udm.png" alt="Company Logo" class="logo">
             <h1>ChatGPT ESG Q&A</h1>
+            <p>This page is built on a collection of ESG report published from selected corporations.</p>
+            <p>You can interrogate the documents inside our collection and add your own documents.</p>
         </div>
 
         <div class="container2">
@@ -56,10 +60,11 @@
                 <h2>3. Press Submit</h2>
                 <input type="submit" value="Submit">
             </form>
-        </div>
-        <div class="container3"> 
-            <h2>Selected Company:</h2>
-            <textarea rows="1" class="rounded-textbox">{{ company_name }}</textarea>
+        <div class="container3">
+            <p><strong>Selected Company:</strong> {{ company_name }}</p>
+            <br>
+            <p><strong>Name of report: </strong>{{ report_name }}</p>
+            
 
             {% if selected_company and selected_question %}
                 <div class="text-area">
@@ -69,6 +74,10 @@
                 <div class="text-area">
                     <h2>Response</h2>
                     <textarea rows="10" class="rounded-textbox">{{ response }}</textarea>
+                </div>
+                <div class="text-area">
+                    <h2>Excerpt</h2>
+                    <a href="{{ reference_url }}" target="_blank">{{ reference_url }}</a>
                 </div>
             {% endif %}
         </div>

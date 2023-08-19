@@ -12,6 +12,7 @@ with open('config.json', 'r') as json_file:
 app.config.update(config_data)
 secret_key = app.config['SECRET_KEY']
 upload_folder = app.config['UPLOAD_FOLDER']
+ngrok_url = app.config['NGROK_URL']
 
 # Get company names as list
 companies = jbu.collection_doc_names_id()
@@ -24,11 +25,13 @@ with open('template.txt', 'r') as file:
 
 @app.route('/')
 def index():
+    global companies
     selected_company = ''
     selected_question = ''
     company_name = ''
     prompt = ''
     response = ''
+    report_name = ''
     entered_question = ''
     return render_template('index.html',
                            companies=companies,
@@ -37,7 +40,8 @@ def index():
                            selected_question=selected_question,
                            company_name=company_name,
                            prompt=prompt,
-                           response=response)
+                           response=response,
+                           report_name=report_name)
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
@@ -59,12 +63,15 @@ def process():
     entered_question = request.form.get('text_input')
     qnumber = int(selected_question[:2])
     company_name = selected_company
+    report_name = jbu.query_for_title(company_name)
+    link_url = f"{ngrok_url}/uploaded_files/{company_name}.pdf"
     if entered_question == '':
         prompt_response = jbu.submit_prompt(template,company_name,qnumber)
     else:
         prompt_response = jbu.simple_prompt(entered_question,company_name)
     prompt = prompt_response[0]
     response = prompt_response[1]
+    excerpt, reference_url = jbu.excerpt(response)
     return render_template('index.html',
                            companies=companies,
                            questions=questions,
@@ -72,7 +79,10 @@ def process():
                            selected_question=selected_question,
                            company_name=company_name,
                            prompt=prompt,
-                           response=response)
+                           response=response,
+                           excerpt=excerpt,
+                           report_name=report_name,
+                           reference_url=reference_url)
 
 
 
