@@ -12,7 +12,7 @@ with open('config.json', 'r') as json_file:
 app.config.update(config_data)
 secret_key = app.config['SECRET_KEY']
 upload_folder = app.config['UPLOAD_FOLDER']
-ngrok_url = app.config['NGROK_URL']
+
 
 # Get company names as list
 companies = jbu.collection_doc_names_id()
@@ -53,7 +53,9 @@ def upload():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             filepath = os.path.join(upload_folder, filename)
             jbu.upload_to_collection(filepath)
-            companies.append(os.path.splitext(filename)[0])
+            #companies.append(os.path.splitext(filename)[0])
+            companies = jbu.collection_doc_names_id()
+
     return redirect(url_for('index'))
 
 @app.route('/process', methods=['GET', 'POST'])
