@@ -22,6 +22,10 @@ with open('questions.txt') as file:
 # Get template file
 with open('template.txt', 'r') as file:
     template = file.read()
+#load company_name : URK
+with open('pdf.json', 'r') as json_file:
+    pdf_url = json.load(json_file)
+
 
 @app.route('/')
 def index():
@@ -66,6 +70,10 @@ def process():
     qnumber = int(selected_question[:2])
     company_name = selected_company
     report_name = jbu.query_for_title(company_name)
+    if company_name in pdf_url:
+        url = pdf_url[company_name]
+    else:
+        url = f"No URL found for {company_name}"
     if entered_question == '':
         prompt_response = jbu.submit_prompt(template,company_name,qnumber)
     else:
@@ -83,7 +91,8 @@ def process():
                            response=response,
                            excerpt=excerpt,
                            report_name=report_name,
-                           reference_url=reference_url)
+                           reference_url=reference_url,
+                           url=url)
 
 
 
