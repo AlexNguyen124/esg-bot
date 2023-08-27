@@ -100,11 +100,16 @@ def excerpt(response):
         reference_url = 'Not Applicable'
     else:
         try:
-            output = collection.query(response,top_k=1)
+            output = collection.query(response,top_k=3)
             excerpt = output.results[0].results[0].text
-            reference_url = output.results[0].results[0].reference_url
+            reference_url0 = output.results[0].results[0].reference_url
+            reference_url1 = output.results[0].results[1].reference_url
+            reference_url2 = output.results[0].results[2].reference_url
         except IndexError:
             excerpt = ''
-            reference_url = ''
+            reference_url0 = ''
+            reference_url1 = ''
+            reference_url2 = ''
+        reference_url = reference_url0,reference_url1,reference_url2
 
     return excerpt, reference_url

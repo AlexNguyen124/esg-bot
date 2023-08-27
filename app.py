@@ -14,8 +14,7 @@ secret_key = app.config['SECRET_KEY']
 upload_folder = app.config['UPLOAD_FOLDER']
 
 
-# Get company names as list
-companies = jbu.collection_doc_names_id()
+
 # Get question list
 with open('questions.txt') as file:
     questions = [line.rstrip() for line in file]
@@ -37,6 +36,8 @@ def index():
     response = ''
     report_name = ''
     entered_question = ''
+    # Get company names as list
+    companies = jbu.collection_doc_names_id()
     return render_template('index.html',
                            companies=companies,
                            questions=questions,
@@ -81,6 +82,9 @@ def process():
     prompt = prompt_response[0]
     response = prompt_response[1]
     excerpt, reference_url = jbu.excerpt(response)
+    reference_url0=reference_url[0]
+    reference_url1=reference_url[1]
+    reference_url2=reference_url[2]
     return render_template('index.html',
                            companies=companies,
                            questions=questions,
@@ -91,7 +95,9 @@ def process():
                            response=response,
                            excerpt=excerpt,
                            report_name=report_name,
-                           reference_url=reference_url,
+                           reference_url0=reference_url0,
+                           reference_url1=reference_url1,
+                           reference_url2=reference_url2,
                            url=url)
 
 
