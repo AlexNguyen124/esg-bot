@@ -66,7 +66,6 @@ def process():
     qnumber = int(selected_question[:2])
     company_name = selected_company
     report_name = jbu.query_for_title(company_name)
-    link_url = f"{ngrok_url}/uploaded_files/{company_name}.pdf"
     if entered_question == '':
         prompt_response = jbu.submit_prompt(template,company_name,qnumber)
     else:
