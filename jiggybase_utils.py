@@ -89,6 +89,7 @@ def excerpt(response):
         r"I couldn't find any specific information",
         r"there is not enough information",
         r"there is not enough evidence"
+        r"the report does not provide information"
     ]
 
     # Combine patterns into a single regular expression
