@@ -44,7 +44,7 @@
                 
                 <br>          
                 <br>
-                
+                <br>
                 <h2>2. Ask a question</h2>
                 <label for="question">from this menu:</label>
                 <select name="question">
@@ -52,11 +52,12 @@
                     <option value="{{ question }}" {% if question == selected_question %}selected{% endif %}>{{ question }}</option>
                     {% endfor %}
                 </select>
-                
-                <p>  </p>
+                <br>
+                <br>
                 <!-- write your own question -->
                 <label for="text_input">or enter your own question:</label>
                     <input type="text" name="text_input" placeholder="Enter text">
+                <br>
                 <br>
                 <br>
                 <h2>3. Press Submit</h2>
@@ -89,6 +90,7 @@
                     <br>
                     <a href="{{ reference_url2 }}" target="_blank">{{ reference_url2 }}</a>
                 </div>
+            </div>
             {% endif %}
     </body>
 </html>

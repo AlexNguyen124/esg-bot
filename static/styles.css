@@ -76,6 +76,7 @@ input[type="file"], select, input[type="text"] {
 
 /* Style for the file input element */
 input[type="file"]::file-selector-button {
+    border: 1px solid #ccc; /* Adjust border thickness */
     border-radius: 10px; /* Add rounded corners */
     padding: 8px 15px; /* Add some padding for better visual appearance */
     background-color: #f0f0f0; /* Change the background color */
