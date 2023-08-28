@@ -50,6 +50,7 @@ def index():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
+    print('Uploading')
     global companies
     if request.method == 'POST':
         file = request.files['file']
