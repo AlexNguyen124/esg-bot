@@ -1,6 +1,6 @@
 {
     "SECRET_KEY": "my_secret_key",
-    "DEBUG": true,
+    "DEBUG": false,
     "UPLOAD_FOLDER": "uploaded_files",
     "NGROK_URL": "https://631a-70-80-23-240.ngrok-free.app/"
   }
